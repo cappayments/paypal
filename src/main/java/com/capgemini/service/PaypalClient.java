@@ -93,7 +93,7 @@ public class PaypalClient {
 	        APIContext context = new APIContext(clientId, clientSecret, "sandbox");
 	        Payment createdPayment = payment.execute(context, paymentExecution);
 	        if(createdPayment!=null){
-	            //response.put("status", "success");
+	        	response.put("status", "success");
 	            response.put("payment", createdPayment);
 	        }
 	    } catch (PayPalRESTException e) {
